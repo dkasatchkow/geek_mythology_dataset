@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS relationships (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    object1 TEXT NOT NULL,
+    object2 TEXT NOT NULL,
+    relationship TEXT NOT NULL
+);
