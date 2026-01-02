@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relationships</title>
+</head>
+<body>
+    <h1>Add Relationship</h1>
+    <form method="post">
+        <label for="object1">Object 1:</label>
+        <input type="text" name="object1" id="object1" required>
+        <br>
+        <label for="object2">Object 2:</label>
+        <input type="text" name="object2" id="object2" required>
+        <br>
+        <label for="relationship">Relationship:</label>
+        <input type="text" name="relationship" id="relationship" required>
+        <br>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Existing Relationships</h2>
+    <ul>
+        {% for row in relationships %}
+            <li>{{ row['object1'] }} is {{ row['relationship'] }} {{ row['object2'] }}</li>
+        {% else %}
+            <li>No relationships found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
